@@ -3,6 +3,7 @@ package sg.edu.np.mad.practical2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,5 +38,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Unfollow",Toast.LENGTH_SHORT).show();
                 }
         }});
+
+        Button msgButton = (Button) findViewById(R.id.messageButton);
+        msgButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, MessageGroup.class);
+                startActivity(myIntent);
+            }
+        });
+
     }
 }

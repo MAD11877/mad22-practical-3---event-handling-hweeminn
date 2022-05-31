@@ -19,8 +19,7 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-
-        ImageView img = findViewById(R.id.profilePic);
+        ImageView img = (ImageView) findViewById(R.id.profilePic);
         img.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
