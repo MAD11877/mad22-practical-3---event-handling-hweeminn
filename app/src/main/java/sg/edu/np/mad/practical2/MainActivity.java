@@ -6,7 +6,12 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Random ran = new Random();
+        int value = ran.nextInt(1000000000);
+        TextView text =  findViewById(R.id.madName);
+        text.setText("Mad " + value);
 
         Button button = (Button) findViewById(R.id.followButton);
         button.setOnClickListener(new View.OnClickListener() {
